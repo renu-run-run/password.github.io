@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>
+    show/hide Password
+</title>
+<link rel="stylesheet" href="style.css">
+<link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <input type="password" placeholder="password" id="password">
+        <span ><i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i></span>
+    </div>
+    <script>
+        var state = false;
+        function toggle(){
+            if(state){
+                document.getElementById("password").setAttribute("type", "password");
+                document.getElementById("eye").style.color='#7a797e'
+                state = false;
+            }
+            else{
+                document.getElementById("password").setAttribute("type", "text");
+                document.getElementById("eye").style.color='#5887ef'
+                state = true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
